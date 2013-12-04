@@ -1,0 +1,53 @@
+/*------------------------------------------------------------------
+[links.less]
+-------------------------------------------------------------------*/
+
+
+// global link styles
+a {
+	text-decoration: none;
+	color: @rose;
+	&:visited {
+	}
+	&:hover {
+		text-decoration: underline;
+		color: @rose-dk;
+	}
+	&:focus {
+		outline: none;
+		text-shadow: none !important;
+		color: @white !important;
+		background: @rose-lt !important;
+	}
+	&:active {
+		text-decoration: underline;
+		color: @rose-lt;
+		background: @green-lt;
+	}
+}
+
+// headline link styles
+h1,
+h2 {
+
+	a {
+		text-decoration: none;
+		color: @rose;
+		&:visited {
+		}
+		&:focus {
+			text-decoration: none;
+			color: @rose-dk;
+		}
+		&:hover {
+			text-decoration: none;
+			color: @rose-dk;
+			background: lighten(@rose-lt, 34%);
+		}
+		&:active {
+			text-decoration: underline;
+			color: @rose-lt;
+			background: none;
+		}
+	}
+}

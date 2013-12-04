@@ -1,0 +1,69 @@
+/*------------------------------------------------------------------
+[type.less]
+-------------------------------------------------------------------*/
+
+
+// font
+@headline-font: "adelle", serif;
+@highlight-font: "freight-sans-pro", sans-serif;
+@body-font: "proxima-nova", sans-serif;
+
+// size
+@big: 17px; // line-height: 23px;
+@normal: 15px; // line-height: 21px;
+@small: 13px; // line-height: 18px;
+@tiny: 11px; // line-height: 16px;
+
+
+h1 {
+    font-family: @headline-font;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    text-shadow: 0 1px 1px rgba(255,255,255, 0.5);
+    color: @grey-dk;
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    font-family: @headline-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-shadow: 0 1px 1px rgba(255,255,255, 0.5);
+    color: @grey-dk;
+    margin: 0 0 12px 0;
+}
+
+h3 {
+  font-family: @headline-font;
+  line-height: 24px;
+}
+h3,
+h4 {
+    font-size: @big;
+    font-weight: 400;
+    line-height: 23px;
+    text-shadow: 0 1px 1px rgba(255,255,255, 0.5);
+    color: @grey;
+    display: inline-block;
+    margin: 8px 0 8px;
+}
+
+h5,
+h6 {
+    font-size: @normal;
+    margin: 0 0 10px 0;
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+em {
+	background: @green-lt;
+}
+
+del {
+	background: @rose-bg;
+}

@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------
+[media-queries.less]
+-------------------------------------------------------------------*/
+
+
+// small screen
+@media (max-width: 768px) {
+
+	body {
+		#page {
+			width: 100%;
+			.footer {
+				.left,
+				.right {
+					text-align: center;
+					float: none;
+				}
+			}
+		}
+		#primary {
+			#content {
+				margin: 0 !important; // remove margin allowing for sidebar width
+			}
+		}
+		#secondary {
+			display: none; // hiding the sidebar for now
+		}
+	}
+}

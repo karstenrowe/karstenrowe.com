@@ -1,0 +1,326 @@
+/*------------------------------------------------------------------
+[framework.less]
+-------------------------------------------------------------------*/
+
+
+// body
+html {
+	background-color: lighten(@warm-white, 7%);
+	.2x('http://karstenrowe.files.wordpress.com/2013/11/footer-bg.jpg', "no-repeat", 1000px, 200px);
+	background-position: 50% 100%;
+}
+body {
+	font-family: @body-font;
+	font-size: @normal;
+	font-weight: 400;
+	color: @grey;
+	line-height: 21px;
+	text-shadow: 0 1px 1px rgba(255,255,255, 0.35);
+	.2x('http://karstenrowe.files.wordpress.com/2013/11/footer-bg.jpg', "no-repeat", 1000px, 200px);
+	background-position: 50% -30px;
+	.clearfix;
+	margin: 0;
+	padding: 0 12px;
+}
+
+
+// framework
+#page {
+	width: 960px;
+	margin: 0 auto;
+	.clearfix;
+
+	// page header
+	#branding {
+		margin-top: 60px; // allows for fixed nav height
+		// h1
+		#site-title {
+			.visuallyhidden;
+		}
+
+		// h2
+		#site-description {
+			.2x('http://karstenrowe.files.wordpress.com/2013/10/logo-karstenrowe_2014.png', "no-repeat", 60px, 60px);
+			background-position: 1px 1px;
+			display: inline-block;
+			padding: 16px 60px 16px 70px;
+		}
+
+		// nav
+		#access {
+			background: rgba(255,255,255, 0.94);
+			border-bottom: 1px solid @warm-white;
+			position: fixed;
+			z-index: 1;
+			opacity: 0.95;
+			top: 0;
+			left: 0;
+
+			// ul
+			.menu {
+				width: 960px;
+				margin: 0 auto;
+
+				// li
+				.menu-item {
+					margin: 0 0 -1px 0;
+
+					a {
+						border-bottom: 1px solid transparent;
+						padding: 4px 12px;
+					}
+
+					a:visited {
+						color: @rose;
+					}
+
+					&.current-menu-item,
+					&.current_page_parent {
+
+						a {
+							color: @rose-lt;
+							//background: lighten(@rose-lt, 34%);
+							//background: @white;
+							border-bottom: 1px solid @rose-lt;
+						}
+					}
+
+					&:hover {
+
+						a {
+							color: @rose-lt;
+							//background: lighten(@rose-lt, 34%);
+							background: none;
+							border-bottom: 1px solid @rose-lt;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// content container
+	#main {
+		.clearfix;
+
+		// main column
+		#primary {
+			float: left;
+			width: 100%;
+			margin: 0 -260px 0 0;
+
+			// full width layout
+			&.full-width {
+				margin: 0;
+
+				#content {
+					margin: 0;
+				}
+			}
+
+			#content {
+				margin: 0 300px 0 0;
+			}
+		}
+
+		// sidebar
+		#secondary {
+			float: right;
+			overflow: hidden;
+			width: 240px;
+			padding: 30px 0 0 0;
+		}
+	}
+
+	.footer {
+		font-size: @tiny;
+		color: lighten(@grey, 40%);
+		.clearfix;
+		margin: 0 0 30px 0;
+		span {
+			margin: 0 2px;
+		}
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+		}
+	}
+
+	// page title
+	.entry-header {
+		padding: 20px 0 12px 0;
+
+		// h1
+		.entry-title {
+			.2x('http://karstenrowe.files.wordpress.com/2013/11/bg-headline.png', "no-repeat", 147px, 57px);
+			background-position: 0 50%;
+			padding-left: 60px;
+			margin-left: -60px;
+		}
+	}
+	.category-picture {
+		.entry-header .entry-title {
+			.2x('http://karstenrowe.files.wordpress.com/2013/11/bg-headline-rose.png', "no-repeat", 147px, 57px);
+		}
+	}
+	.category-project {
+		.entry-header .entry-title {
+			.2x('http://karstenrowe.files.wordpress.com/2013/11/bg-headline-blue.png', "no-repeat", 147px, 57px);
+		}
+	}
+	.category-workflow,
+	.category-resource {
+		.entry-header .entry-title {
+			.2x('http://karstenrowe.files.wordpress.com/2013/11/bg-headline-grey.png', "no-repeat", 147px, 57px);
+		}
+	}
+
+	// lists
+	ul,
+	ol {
+		margin: 0 0 10px 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			margin: 0 0 6px 0;
+			padding: 0;
+		}
+	}
+
+	// img
+	img {
+		background: @white;
+		.box-shadow (0 1px 2px rgba(0,0,0, 0.07));
+		border: 1px solid @grey-lt;
+		border-radius: 3px;
+		width: auto;
+		max-width: 100%;
+		min-width: 140px;
+		height: 250px;
+		margin: 0 20px 20px 0;
+		padding: 1px;
+		.transition;
+	}
+	a img:hover {
+		.box-shadow (0 1px 1px rgba(0,0,0, 0.03));
+		opacity: 0.8;
+	}
+
+	// map
+	.googlemaps {
+		background: @white;
+		.box-shadow (0 1px 2px rgba(0,0,0, 0.07));
+		border: 1px solid @grey-lt;
+		border-radius: 3px;
+		float: left;
+		width: 100%;
+		margin: 0 0 20px 0;
+		padding: 1px;
+
+		iframe {
+			float: left;
+			width: 100%;
+		}
+
+		small {
+			display: none;
+		}
+	}
+
+
+	// forms
+	#main #primary {
+
+		// text inputs
+		input[type="text"],
+		input[type="password"],
+		input[type="email"],
+		textarea {
+			font-family: @body-font !important;
+			font-size: @normal !important;
+			text-shadow: none !important;
+			line-height: 21px !important;
+			color: @grey !important;
+			background: @white !important;;
+			border: 1px solid @grey-lt !important;
+			border-radius: 3px;
+			.box-shadow (0 1px 1px rgba(255,255,255, 0.75)) !important;
+			.box-sizing-reset;
+			width: 100%;
+			margin: 0;
+			padding: 8px;
+
+			&:focus {
+				color: @grey-dk !important;
+				background: @white !important;
+				border: 1px solid @grey !important;
+			}
+		}
+
+		// submit buttons
+		input[type="submit"],
+		.button {
+			font-family: @body-font !important;
+		}
+	}
+}
+
+
+// polls
+#primary .PDS_Poll {
+	width: 100%;
+
+		.pds-box {
+		font-family: @body-font;
+		font-size: @normal;
+		color: @grey;
+		background: none;
+		border: none;
+		width: 100%;
+
+		.pds-box-outer {
+			padding: 0;
+		}
+
+		.pds-question-top {
+			font-family: @headline-font;
+			font-weight: 400;
+			font-size: @big;
+			line-height: 23px;
+			color: @green-dk;
+			border-bottom: 1px solid @warm-white;
+			margin: 0 0 10px 0;
+			padding: 0 0 4px 0;
+		}
+
+		.pds-answer {
+			border: none;
+			margin: 0 0 10px 0;
+			padding: 0;
+		}
+
+		.pds-answer-group {
+			.clearfix;
+			margin: 0 0 4px 0;
+			padding: 0;
+		}
+
+		.pds-answer-other {
+			margin: 4px 0 6px 0;
+			padding: 0;
+		}
+
+		.pds-links {
+			display: none;
+		}
+	}
+}
+
+
+// hide wordpress ads
+#wordads-preview-parent {
+	display: none;
+}
