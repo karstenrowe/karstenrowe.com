@@ -48,10 +48,26 @@
 			}
 
 			ul {
-				li a {
-					.btn-primary;
+				.clearfix;
+				li {
+					float: left;
+					a {
+						.btn;
+					}
 				}
 			}
+		}
+	}
+}
+
+// about page
+.page-id-1068 {
+
+	#primary {
+		// JustGiving fundraising button
+		ul li a {
+			.btn;
+			display: block;
 		}
 	}
 }
@@ -79,7 +95,7 @@
 			}
 			// view recent projects button
 			ul li a {
-				.btn-primary;
+				.btn;
 			}
 		}
 	}
@@ -102,11 +118,17 @@
 					margin: 0;
 
 					a {
-						.btn-primary;
+						.btn;
 						display: block;
 					}
 				}
 			}
+		}
+		// sidebar
+		.widget_text,
+		.widget_categories,
+		.widget_instagram_picture {
+			display: none !important;
 		}
 	}
 }
@@ -358,9 +380,10 @@ body.archive {
 	}
 }
 
-// blog project and resources
+// blog: projects, respources, workflow
 .category-project,
-.category-resource {
+.category-resource,
+.category-workflow {
 
 	.entry-content {
 
@@ -373,7 +396,7 @@ body.archive {
 				margin: 0;
 
 				a {
-					.btn-primary;
+					.btn;
 				}
 			}
 		}
@@ -409,7 +432,7 @@ body.archive {
 				margin: 10px 0;
 				padding: 0;
 				#submit {
-					.btn-primary;
+					.btn;
 				}
 			}
 		}
