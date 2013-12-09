@@ -67,7 +67,7 @@
 		// JustGiving fundraising button
 		ul li a {
 			.btn;
-			display: block;
+			display: inline-block;
 		}
 	}
 }
@@ -94,8 +94,14 @@
 				}
 			}
 			// view recent projects button
-			ul li a {
-				.btn;
+			ul {
+				.clearfix;
+				li {
+					float: left;
+					a {
+						.btn;
+					}
+				}
 			}
 		}
 	}
