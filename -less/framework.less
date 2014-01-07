@@ -16,6 +16,7 @@ body {
 	color: @grey;
 	line-height: 21px;
 	text-shadow: 0 1px 1px rgba(255,255,255, 0.35);
+	background: none;
 	.2x('http://karstenrowe.files.wordpress.com/2013/11/footer-bg.jpg', "no-repeat", 1000px, 200px);
 	background-position: 50% -30px;
 	.clearfix;
@@ -26,7 +27,8 @@ body {
 
 // framework
 #page {
-	width: 960px;
+	//width: 960px;
+	width: 100%;
 	margin: 0 auto;
 	.clearfix;
 
@@ -45,6 +47,10 @@ body {
 	// page header
 	#branding {
 		margin-top: 60px; // allows for fixed nav height
+		hgroup {
+			.2x('http://karstenrowe.files.wordpress.com/2013/11/bg-headline-rose.png', "no-repeat", 147px, 57px);
+			background-position: 26px 47%;
+		}
 		// h1
 		#site-title {
 			.visuallyhidden;
@@ -55,6 +61,7 @@ body {
 			.2x('http://karstenrowe.files.wordpress.com/2013/10/logo-karstenrowe_2014.png', "no-repeat", 60px, 60px);
 			background-position: 1px 1px;
 			display: inline-block;
+			margin: 14px 0;
 			padding: 16px 60px 16px 70px;
 		}
 
@@ -91,8 +98,6 @@ body {
 
 						a {
 							color: @rose-lt;
-							//background: lighten(@rose-lt, 34%);
-							//background: @white;
 							border-bottom: 1px solid @rose-lt;
 						}
 					}
@@ -101,7 +106,6 @@ body {
 
 						a {
 							color: @rose-lt;
-							//background: lighten(@rose-lt, 34%);
 							background: none;
 							border-bottom: 1px solid @rose-lt;
 						}
@@ -148,7 +152,7 @@ body {
 		font-size: @tiny;
 		color: lighten(@grey, 40%);
 		.clearfix;
-		margin: 0 0 30px 0;
+		margin: 20px 0 30px 0;
 		span {
 			margin: 0 2px;
 		}
@@ -219,6 +223,24 @@ body {
 	a img:hover {
 		.box-shadow (0 1px 1px rgba(0,0,0, 0.03));
 		opacity: 0.8;
+	}
+
+	// comments
+	code {
+		font-size: @small;
+		white-space: normal;
+		width: 100%;
+		margin: 8px 0 12px;
+		padding: 12px 20px;
+	}
+	// forms
+	label {
+		font-weight: normal;
+		margin: 0 3px;
+	}
+	input[type="checkbox"],
+	input[type="radio"] {
+		vertical-align: 1px;
 	}
 
 	// map
@@ -331,7 +353,112 @@ body {
 	}
 }
 
+// featured posts plugin
+// ul
+ul#yiw-featured-post {
+	li {
+		border-bottom: none;
+		margin: 0 !important;
+		padding: 10px 0 18px !important;
+		&:hover {
+			background: none;
+		}
+		.featured-thumb {
+			margin: 0;
+		}
+		img {
+			width: 100px;
+			min-width: 0;
+			height: auto;
+			margin: 0 18px 0 0;
+		}
+		h4 {
+			display: block;
+			span {
+				font-size: @tiny;
+				color: @grey-lt;
+				margin: 0 4px;
+			}
+		}
+		p {
+			margin: 2px 0;
+		}
+		// span
+		.tags {
+			font-size: @small;
+			color: @grey;
+			label {
+				font-weight: normal;
+				display: inline;
+			}
+		}
+	}
+}
 
+// bootstrap slideshow carousel
+// controls
+.carousel-control.left,
+.carousel-control.right {
+	text-shadow: none;
+	background: none;
+	opacity: 1;
+	width: 60px;
+	.glyphicon {
+		top: 45%;
+		font-size: 140%;
+		color: @rose-lt;
+	}
+	&:hover {
+
+		.glyphicon {
+			color: @rose;
+		}
+	}
+}
+#bootstrapslider {
+	// allow for controls
+	left: -18px;
+	right: -18px;
+	margin-bottom: 40px;
+	img {
+		background: none;
+		box-shadow: none;
+		border: none;
+		width: 440px;
+		height: auto;
+		margin: 0 0 0 80px;
+		padding: 0;
+	}
+	.carousel-indicators {
+		text-align: right;
+		left: auto;
+		right: auto;
+		bottom: 0;
+		width: 100%;
+		margin: 0;
+		li {
+			background-color: @grey-lt;
+			border: none;
+			margin: 0 2px;
+			&.active,
+			&:hover {
+				width: 10px;
+				height: 10px;
+				background-color: @rose-lt;
+			}
+		}
+	}
+	.carousel-caption {
+		text-shadow: 0 1px 1px rgba(255,255,255, 0.5);
+		text-align: left;
+		color: @grey;
+		top: 81px;
+		left: 550px;
+		right: 63px;
+		margin: 0;
+		padding: 0;
+	}
+}
 // hide wordpress ads
 #wordads-preview-parent {
 	display: none;

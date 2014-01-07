@@ -12,39 +12,37 @@
 			display: none;
 		}
 
+		h1 {
+			font-size: 36px;
+			line-height: 40px;
+			color: @green-dk;
+			background: @green-lt;
+			display: inline-block;
+			margin: 0 4px 0 0;
+		}
+
+		h2 {
+	    margin-top: 18px;
+			em {
+				font-size: @small;
+				color: @grey;
+			}
+		}
+
 		.entry-content {
 			margin-top: 20px;
-
-			h1 {
-				color: @green-dk;
-				background: @green-lt;
-				display: inline-block;
-			}
-
-			h2 {
-		    margin-top: 18px;
-				em {
-					font-size: @small;
-					color: @grey;
-				}
-			}
 
 			p {
 				display: inline-block;
 
 				em {
 					font-size: @small;
-					background: none;
+					background: #fff;
 				}
 			}
 
 			a {
-				display: inline-block;
-
-				img {
-					width: 280px;
-					height: auto;
-				}
+				//display: inline-block;
 			}
 
 			ul {
@@ -162,6 +160,8 @@ body.archive {
 		// posts
 		#primary {
 
+			.format-image .entry-header { display: block; }
+
 			// post
 			.post {
 				border-bottom: 1px solid @warm-white;
@@ -201,7 +201,6 @@ body.archive {
 						}
 					}
 				}
-
 				.entry-content {
 					padding: 14px 0;
 
@@ -212,11 +211,6 @@ body.archive {
 						line-height: 22px;
 						background: @green-lt;
 						padding: 0 2px;
-					}
-
-					// lists
-					ul,
-					ol {
 					}
 
 					p {
@@ -292,6 +286,10 @@ body.archive {
 				border-bottom: 1px solid @warm-white;
 				margin: 0 0 10px 0;
 				padding: 0 0 4px 0;
+				label {
+					font-weight: normal;
+					margin: 0;
+				}
 			}
 
 			// widgets
@@ -416,6 +414,11 @@ body.archive {
 	}
 }
 
+// hack for scar top poultry poultry project {
+#page #main #primary .post#post-2459 .entry-content img {
+	max-width: 40%;
+}
+
 
 // blog comments
 #comments {
@@ -436,8 +439,8 @@ body.archive {
 			#comment-form-subscribe {
 				display: none !important;
 			}
-			code {
-				font-size: @small;
+			.form-allowed-tags {
+				width: 100%;
 			}
 			// p
 			.form-submit {
