@@ -210,7 +210,11 @@ body.archive {
 						font-size: @normal;
 						line-height: 22px;
 						background: @green-lt;
-						padding: 0 2px;
+						padding: 14px 10px 14px 20px;
+						p {
+							font-size: @big;
+							line-height: 21px;
+						}
 					}
 
 					p {
@@ -557,23 +561,53 @@ body.archive {
 	}
 }
 
+// search results
+.search-results {
+
+	#primary {
+
+		// h1
+		.page-title {
+			border-bottom: 1px solid @warm-white;
+			margin: 32px 0;
+			padding: 0 0 14px 0;
+
+			span {
+				background: #d4fff3;
+			}
+		}
+	}
+	.widget_text,
+	.widget_categories {
+		display: none;
+	}
+}
 
 // error 404: page not found
 .error404 {
-	.clearfix;
-
+	.widget {
+		// supercede toolbox theme styles – stop sidebar collapse
+		float: none;
+		width: auto;
+		// hide some blog related widgets
+		&.widget_text,
+		&.widget_categories {
+			display: none;
+		}
+	}
 	.entry-content {
-
-		p,
 		#searchform {
-		display: none; // hiding search for now
-		}
-		.widget {
-			display: none; // hiding all but one widget for now
-		}
-		.widget_recent_entries {
-			display: block;
-			width: 100%;
+			background: none;
+			margin: 0 0 20px 0;
+			padding: 0;
+			// inputs
+			#s {
+				float: left !important;
+				width: 65% !important;
+			}
+			#searchsubmit {
+				margin: 0 10px;
+			}
 		}
 	}
 }
